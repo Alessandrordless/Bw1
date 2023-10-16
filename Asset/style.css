@@ -13,13 +13,13 @@ body {
   background-image: url(./Images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 3% 0 0 8%;
+  margin: 3% 8% 0 8%;
   font-family: "Outfit", sans-serif;
   color: white;
 }
 
 header {
-  width: 15%;
+  width: 10%;
 }
 
 header img {
@@ -42,7 +42,8 @@ header img {
 }
 
 .unordered-list {
-  margin-top: 5%;
+  margin-top: 3%;
+  padding-left: 1.8%;
 }
 
 p,
@@ -50,4 +51,42 @@ ul {
   font-size: 16px;
   font-weight: 200;
   font-family: "Outfit", sans-serif;
+}
+
+ul {
+  margin-left: 1%;
+}
+
+ul li {
+  line-height: 1.5;
+  list-style-type: disc;
+}
+
+.checkbox {
+  margin-top: 5.5%;
+}
+
+.checkbox input {
+  height: 20px;
+  width: 2%;
+  vertical-align: middle;
+}
+
+.checkbox span {
+  padding-left: 1%;
+}
+
+#btn-1 {
+  background-color: #00ffff;
+  color: #0b113b;
+  font-weight: bold;
+  border: none;
+  font-size: 25px;
+  padding: 20px 60px;
+  margin-left: 24%;
+  box-shadow: 1px 1px 30px 4px #00ffff;
+}
+
+span {
+  font-weight: 400;
 }
