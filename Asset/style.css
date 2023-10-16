@@ -76,6 +76,8 @@ ul li {
   height: 20px;
   width: 2%;
   vertical-align: middle;
+   appearance: none;
+   border: 1px solid white;
 }
 
 .checkbox span {
@@ -91,6 +93,11 @@ ul li {
   padding: 20px 60px;
   margin-left: 24%;
   box-shadow: 1px 1px 30px 4px #00ffff;
+}
+
+#btn-1:disabled {
+  box-shadow: none;
+  background-color: grey;
 }
 
 span {
