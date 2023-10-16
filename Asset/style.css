@@ -87,6 +87,11 @@ ul li {
   box-shadow: 1px 1px 30px 4px #00ffff;
 }
 
+#btn-1:disabled {
+  box-shadow: none;
+  background-color: grey;
+}
+
 span {
   font-weight: 400;
 }
