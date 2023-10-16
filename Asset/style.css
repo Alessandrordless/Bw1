@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap");
 *,
 *::after,
 *::before {
@@ -32,7 +33,12 @@ header img {
 
 .instructions h1 {
   font-size: 60px;
-  padding-bottom: 2%;
+  padding-bottom: 3%;
+  font-weight: 300;
+}
+
+.instructions span {
+  font-weight: 500;
 }
 
 .instructions h2 {
