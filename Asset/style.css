@@ -70,6 +70,8 @@ ul li {
   height: 20px;
   width: 2%;
   vertical-align: middle;
+   appearance: none;
+   border: 1px solid white;
 }
 
 .checkbox span {
