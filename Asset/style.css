@@ -73,7 +73,10 @@ ul li {
    appearance: none;
    border: 1px solid white;
 }
-
+.checkbox input:checked {
+  appearance: auto;
+  
+}
 .checkbox span {
   padding-left: 1%;
 }
