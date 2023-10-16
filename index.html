@@ -3,7 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./Asset/reset.css" />
+    <link rel="stylesheet" href="./Asset/style.css" />
+    <title>Welcome Page</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img src="./Asset/Images/epicode_logo.png" alt="" />
+    </header>
+
+    <main>
+      <div class="instructions">
+        <h1>Welcome to <span>your exam</span></h1>
+        <h2>Instructions</h2>
+        <p>
+          We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure
+          of a few of them.
+        </p>
+      </div>
+      <div class="unordered-list">
+        <ul>
+          <li>Each question in <span>timed</span> and can only be <span>answered once.</span></li>
+          <li>Changing browser tab or opening other windows will <span>invalidate the question.</span></li>
+          <li>This exam will take approx. <span> 0-5 minutes.</span></li>
+        </ul>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" />
+        <label for="checkbox"><span>I promise to answer myself without help from anyone</span></label>
+        <button id="btn-1">Proceed</button>
+      </div>
+    </main>
+  </body>
 </html>

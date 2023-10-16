@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./Images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 3% 0 0 8%;
+  color: white;
+}
+
+header {
+  width: 15%;
+}
+
+header img {
+  width: 100%;
+}
