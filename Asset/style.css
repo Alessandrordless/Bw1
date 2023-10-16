@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap");
 *,
 *::after,
 *::before {
@@ -11,6 +14,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 3% 0 0 8%;
+  font-family: "Outfit", sans-serif;
   color: white;
 }
 
@@ -20,4 +24,30 @@ header {
 
 header img {
   width: 100%;
+}
+
+.instructions {
+  margin-top: 7%;
+}
+
+.instructions h1 {
+  font-size: 60px;
+  padding-bottom: 2%;
+}
+
+.instructions h2 {
+  color: #c2128d;
+  font-size: 25px;
+  padding-bottom: 1%;
+}
+
+.unordered-list {
+  margin-top: 5%;
+}
+
+p,
+ul {
+  font-size: 16px;
+  font-weight: 200;
+  font-family: "Outfit", sans-serif;
 }
