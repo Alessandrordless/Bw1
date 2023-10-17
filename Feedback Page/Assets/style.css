@@ -91,6 +91,7 @@ main form {
 .star {
   width: 5%;
   padding-left: 1%;
+  
 }
 
 ::placeholder {
@@ -113,5 +114,6 @@ main form {
 
 .stars i {
   font-size: 2.4em;
-  color: #0b113b;
+  color: #0a198688;
+  
 }
