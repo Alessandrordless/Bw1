@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../../Welcome/Images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 3% 8% 0 8%;
+  font-family: "Outfit", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+header {
+  width: 10%;
+}
+
+header img {
+  width: 150px;
+  margin: 40% 0 0 90%;
+}
+
+main h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  margin-top: 8%;
+  padding-bottom: 2%;
+}
+
+.text-div p {
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 3%;
+}
+
+main form {
+  margin-top: 2%;
+}
+
+.just-p p {
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 8%;
+}
+
+.input-comment {
+  background-color: transparent;
+  appearance: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border: 0;
+  border-color: #c2128d;
+  padding-left: 3%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 66%;
+  color: white;
+}
+
+#btn {
+  color: #0b113b;
+  background-color: #00ffff;
+  border: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 45px;
+  margin-top: 5%;
+  box-shadow: 1px 1px 20px 1px #00ffff;
+}
+
+#btn:disabled {
+  box-shadow: none;
+  background-color: grey;
+}
+
+.star {
+  width: 5%;
+  padding-left: 1%;
+}
+
+::placeholder {
+  text-align: start;
+  color: grey;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+}
+
+.div-input {
+  width: 100%;
+  text-align: start;
+  margin: 0 17% 0;
+}
+
+.button-div {
+  border-top: 2px solid #c2128d;
+  margin: 0 17% 0;
+}
+
+.stars i {
+  font-size: 2.4em;
+  color: #0b113b;
+}
