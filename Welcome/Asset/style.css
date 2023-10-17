@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap");
 *,
 *::after,
 *::before {
@@ -14,9 +11,14 @@ body {
   background-image: url(../Images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 3% 8% 0 8%;
   font-family: "Outfit", sans-serif;
   color: white;
+}
+
+.body {
+  max-width: 85%;
+  margin: 0 auto;
+  margin-top: 5%;
 }
 
 header {
@@ -34,11 +36,11 @@ header img {
 .instructions h1 {
   font-size: 60px;
   padding-bottom: 3%;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .instructions span {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .instructions h2 {
@@ -55,7 +57,7 @@ header img {
 p,
 ul {
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 400;
   font-family: "Outfit", sans-serif;
 }
 
@@ -93,7 +95,7 @@ ul li {
   border: none;
   font-size: 25px;
   padding: 20px 60px;
-  margin-left: 24%;
+  float: right;
   box-shadow: 1px 1px 30px 4px #00ffff;
 }
 
@@ -103,5 +105,5 @@ ul li {
 }
 
 span {
-  font-weight: 400;
+  font-weight: 600;
 }
