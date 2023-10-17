@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url(/Welcome/Images/bg.jpg);
+  background-image: url(./Welcome/Images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 3% 8% 0 8%;
