@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+body {
+  background-image: url("../../Welcome/Asset/Images/bg.jpg");
+  background-size: cover;
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
+header {
+  padding-bottom: 25px;
+}
+header img {
+  width: 17%;
+}
+#container {
+  padding: 40px 100px 90px 90px;
+  height: 100%;
+}
+header + div {
+  text-align: center;
+}
+h1 {
+  font-size: 3rem;
+  padding-bottom: 10px;
+}
+h2 {
+  font-size: 1.7rem;
+}
+.bold {
+  font-weight: bold;
+}
+#grades {
+  padding: 30px 0;
+  height: 50vh;
+  text-align: justify;
+}
+.grade {
+  display: inline-block;
+  width: 27.9%;
+  height: 100%;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 12.5% 0;
+}
+.grade:nth-of-type(2) {
+  width: 41.9%;
+  position: relative;
+  text-align: center;
+}
+.grade > div {
+  display: inline-block;
+  margin: auto;
+}
+
+.grade:nth-of-type(3) {
+  text-align: right;
+}
+
+.grade:nth-of-type(3) h1,
+.grade:nth-of-type(3) p {
+  color: rgba(255, 255, 255, 0.733);
+}
+.pie {
+  --w: 150px;
+  width: 100%;
+  aspect-ratio: 1;
+  display: inline-grid;
+  place-content: center;
+  margin: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.pie:before {
+  content: "";
+  position: absolute;
+  border-radius: 60%;
+  inset: 0;
+  background: conic-gradient(var(--c) calc(var(--p) * 1%), #02fefe 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  margin-bottom: 40px;
+}
+#btn-rateus {
+  text-align: center;
+}
+#btn-rateus button {
+  padding: 10px 50px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: white 2px solid;
+  box-shadow: 1px 1px 30px 1px rgba(0, 255, 225, 0.445);
+  padding: 15px 60px;
+  color: white;
+}
+.pie p {
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 50%;
+  margin: auto;
+}
+.pie p:nth-child(2) {
+  color: #02fefe;
+}
+.pie p:nth-child(3) {
+  margin-top: 20px;
+  font-size: 0.8rem;
+}
