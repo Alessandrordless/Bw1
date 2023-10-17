@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
 
 body {
-  background-image: url("../../Welcome/Asset/Images/bg.jpg");
+  background-image: url("../../Welcome/Images/bg.jpg");
   background-size: cover;
   color: white;
   font-family: "Outfit", sans-serif;
