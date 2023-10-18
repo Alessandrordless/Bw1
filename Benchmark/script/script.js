@@ -109,6 +109,7 @@ window.onload = function () {
       seconds = 60;
     }
   }, 1000);
+  const nextButton = document.getElementById("btn-next")
 
   nextButton.addEventListener("click", handleNext);
   populateText(currentquestion);
@@ -128,6 +129,11 @@ const populateText = (question) => {
   const firstAnswer = document.querySelector(".answers p");
   firstAnswer.innerText = question.incorrect_answers[0];
   const secondAnswer = document.querySelector(".answers:nth-of-type(2) p");
+  secondAnswer.innerText = question.incorrect_answers[1];
+  const thirdAnswer = document.querySelector(".answers:nth-of-type(3) p");
+  thirdAnswer.innerText = question.incorrect_answers[2];
+  const fourthAnswer = document.querySelector(".answers:nth-of-type(4) p");
+  fourthAnswer.innerText = question.correct_answer;
 
 };
 
