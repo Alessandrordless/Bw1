@@ -99,6 +99,7 @@ const questions = [
 window.onload = function () {
   window.score = 0;
   window.currentquestion = questions[0];
+  window.questionNumber = 1
   window.seconds = 60;
   setInterval(() => {
     const counter = document.querySelector(".counter span");
@@ -122,9 +123,12 @@ const checkQuestion = (question, useranswer) => {
 const populateText = (question) => {
   const h1 = document.querySelector("h1");
   h1.innerText = question.question;
+  const questionP = document.querySelector(".questions-counter p");
+  questionP.innerHTML = `QUESTION ${questionNumber} /<span> 10</span>`;
   const firstAnswer = document.querySelector(".answers p");
   firstAnswer.innerText = question.incorrect_answers[0];
   const secondAnswer = document.querySelector(".answers:nth-of-type(2) p");
+
 };
 
 const handleNext = (event) => {
@@ -136,7 +140,9 @@ const nextQuestion = (questions, currentquestion, event) => {
   if (event !== null) {
     checkQuestion(currentquestion, event.srcElement.innerText);
   }
+  questionNumber++;
   populateText(questions[questions.indexOf(currentquestion) + 1]);
 };
 
 const questionTimeOut = () => {};
+
