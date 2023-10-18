@@ -3,8 +3,8 @@ const highlightAnswer = (event) => {
   console.log(event);
   const answerButton = event.srcElement;
   const answerDiv = answerButton.parentElement.parentElement;
-  answerDiv.classList.add("selected-answer");
-  if (answerDiv.classList.includes("selected-answer")) {
+  // answerDiv.classList.add("selected-answer");
+  if (answerDiv.classList.contains("selected-answer")) {
     answerDiv.classList.remove("selected-answer");
   } else {
     answerDiv.classList.add("selected-answer");
@@ -96,11 +96,13 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"]
   }
 ];
+
+window.score = 0;
+window.currentquestion = questions[0];
+window.questionNumber = 1;
+window.seconds = 60;
+
 window.onload = function () {
-  window.score = 0;
-  window.currentquestion = questions[0];
-  window.questionNumber = 1
-  window.seconds = 60;
   setInterval(() => {
     const counter = document.querySelector(".counter span");
     counter.innerText = --seconds;
@@ -109,7 +111,7 @@ window.onload = function () {
       seconds = 60;
     }
   }, 1000);
-  const nextButton = document.getElementById("btn-next")
+  const nextButton = document.getElementById("btn-next");
 
   nextButton.addEventListener("click", handleNext);
   populateText(currentquestion);
@@ -126,15 +128,30 @@ const populateText = (question) => {
   h1.innerText = question.question;
   const questionP = document.querySelector(".questions-counter p");
   questionP.innerHTML = `QUESTION ${questionNumber} /<span> 10</span>`;
-  const firstAnswer = document.querySelector(".answers p");
-  firstAnswer.innerText = question.incorrect_answers[0];
-  const secondAnswer = document.querySelector(".answers:nth-of-type(2) p");
-  secondAnswer.innerText = question.incorrect_answers[1];
-  const thirdAnswer = document.querySelector(".answers:nth-of-type(3) p");
-  thirdAnswer.innerText = question.incorrect_answers[2];
-  const fourthAnswer = document.querySelector(".answers:nth-of-type(4) p");
-  fourthAnswer.innerText = question.correct_answer;
 
+  if (question.type === "multiple") {
+    const firstAnswer = document.querySelector(".answers p");
+    firstAnswer.innerText = question.incorrect_answers[0];
+    const secondAnswer = document.querySelector(".answers:nth-of-type(2) p");
+    secondAnswer.innerText = question.incorrect_answers[1];
+    const thirdAnswer = document.querySelector(".answers:nth-of-type(3) p");
+    thirdAnswer.innerText = question.incorrect_answers[2];
+    thirdAnswer.parentElement.parentElement.style.display = "inline-block";
+    const fourthAnswer = document.querySelector(".answers:nth-of-type(4) p");
+    fourthAnswer.innerText = question.correct_answer;
+    fourthAnswer.parentElement.parentElement.style.display = "inline-block";
+  } else {
+    const firstAnswer = document.querySelector(".answers p");
+    firstAnswer.innerText = "True";
+    const secondAnswer = document.querySelector(".answers:nth-of-type(2) p");
+    secondAnswer.innerText = "False";
+    const thirdAnswer = document.querySelector(".answers:nth-of-type(3) p");
+    thirdAnswer.parentElement.parentElement.style.display = "none"
+    const fourthAnswer = document.querySelector(".answers:nth-of-type(4) p");
+    fourthAnswer.parentElement.parentElement.style.display = "none";
+  }
+
+  console.log("score:", score);
 };
 
 const handleNext = (event) => {
@@ -146,9 +163,10 @@ const nextQuestion = (questions, currentquestion, event) => {
   if (event !== null) {
     checkQuestion(currentquestion, event.srcElement.innerText);
   }
+
   questionNumber++;
-  populateText(questions[questions.indexOf(currentquestion) + 1]);
+  
+  currentquestion = questions[questionNumber - 1];
+  
+  populateText(currentquestion);
 };
-
-const questionTimeOut = () => {};
-
