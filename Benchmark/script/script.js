@@ -1,18 +1,3 @@
-const answers = document.getElementsByClassName("answers");
-const highlightAnswer = (event) => {
-  console.log(event);
-  const answerButton = event.srcElement;
-  const answerDiv = answerButton.parentElement.parentElement;
-  // answerDiv.classList.add("selected-answer");
-  if (answerDiv.classList.contains("selected-answer")) {
-    answerDiv.classList.remove("selected-answer");
-  } else {
-    answerDiv.classList.add("selected-answer");
-  }
-};
-
-Array.from(answers).forEach((answer) => answer.children[0].addEventListener("click", highlightAnswer));
-
 const questions = [
   {
     category: "Science: Computers",
@@ -97,15 +82,32 @@ const questions = [
   }
 ];
 
+const answers = Array.from(document.getElementsByClassName("answers"));
+const highlightAnswer = (event) => {
+  const selectedAnswer = document.querySelector(".selected-answer");
+  if (selectedAnswer) {
+    selectedAnswer.classList.remove("selected-answer");
+  }
+  const answerButton = event.srcElement;
+  const answerDiv = answerButton.parentElement.parentElement;
+  useranswer = answerButton.innerText;
+  answerDiv.classList.add("selected-answer");
+};
+
+answers.forEach((answer) => answer.children[0].addEventListener("click", highlightAnswer));
+
 window.score = 0;
-window.currentquestion = questions[0];
-window.questionNumber = 1;
-window.seconds = 60;
+let currentquestion = questions[0];
+let questionNumber = 1;
+let seconds = 60;
+let useranswer = null;
 
 window.onload = function () {
   setInterval(() => {
     const counter = document.querySelector(".counter span");
     counter.innerText = --seconds;
+    const pie = document.getElementsByClassName("pie")[0];
+    pie.style
     if (seconds === 0) {
       nextQuestion(questions, currentquestion, null);
       seconds = 60;
@@ -117,56 +119,64 @@ window.onload = function () {
   populateText(currentquestion);
 };
 
-const checkQuestion = (question, useranswer) => {
+const handleNext = (event) => {
+  nextQuestion(questions, currentquestion, event);
+  seconds = 60;
+};
+
+const checkQuestion = (question) => {
   const correctAnswer = question.correct_answer;
+  console.log(useranswer, correctAnswer);
+  console.log(useranswer === correctAnswer);
   if (useranswer === correctAnswer) {
-    score += 1;
+    score++;
   }
 };
+
+const nextQuestion = (questions, currentquestion, event) => {
+  const selectedAnswer = document.querySelector(".selected-answer");
+  if (selectedAnswer) {
+    selectedAnswer.classList.remove("selected-answer");
+  }
+
+  if (event !== null) {
+    checkQuestion(currentquestion);
+  }
+  questionNumber++;
+  currentquestion = questions[questionNumber - 1];
+  populateText(currentquestion);
+};
+
 const populateText = (question) => {
   const h1 = document.querySelector("h1");
   h1.innerText = question.question;
   const questionP = document.querySelector(".questions-counter p");
   questionP.innerHTML = `QUESTION ${questionNumber} /<span> 10</span>`;
 
+  const firstAnswer = document.querySelector(".answers p");
+  const secondAnswer = document.querySelector(".answers:nth-of-type(2) p");
+  const thirdAnswer = document.querySelector(".answers:nth-of-type(3) p");
+  const fourthAnswer = document.querySelector(".answers:nth-of-type(4) p");
+
   if (question.type === "multiple") {
-    const firstAnswer = document.querySelector(".answers p");
     firstAnswer.innerText = question.incorrect_answers[0];
-    const secondAnswer = document.querySelector(".answers:nth-of-type(2) p");
+
     secondAnswer.innerText = question.incorrect_answers[1];
-    const thirdAnswer = document.querySelector(".answers:nth-of-type(3) p");
+
     thirdAnswer.innerText = question.incorrect_answers[2];
     thirdAnswer.parentElement.parentElement.style.display = "inline-block";
-    const fourthAnswer = document.querySelector(".answers:nth-of-type(4) p");
+
     fourthAnswer.innerText = question.correct_answer;
     fourthAnswer.parentElement.parentElement.style.display = "inline-block";
   } else {
-    const firstAnswer = document.querySelector(".answers p");
     firstAnswer.innerText = "True";
-    const secondAnswer = document.querySelector(".answers:nth-of-type(2) p");
     secondAnswer.innerText = "False";
-    const thirdAnswer = document.querySelector(".answers:nth-of-type(3) p");
-    thirdAnswer.parentElement.parentElement.style.display = "none"
-    const fourthAnswer = document.querySelector(".answers:nth-of-type(4) p");
+
+    thirdAnswer.parentElement.parentElement.style.display = "none";
     fourthAnswer.parentElement.parentElement.style.display = "none";
   }
 
   console.log("score:", score);
 };
 
-const handleNext = (event) => {
-  nextQuestion(questions, currentquestion, event);
-  seconds = 60;
-};
 
-const nextQuestion = (questions, currentquestion, event) => {
-  if (event !== null) {
-    checkQuestion(currentquestion, event.srcElement.innerText);
-  }
-
-  questionNumber++;
-  
-  currentquestion = questions[questionNumber - 1];
-  
-  populateText(currentquestion);
-};
