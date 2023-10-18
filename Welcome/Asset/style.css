@@ -80,6 +80,7 @@ ul li {
   vertical-align: text-bottom;
   appearance: none;
   border: 1px outset white;
+  cursor: pointer;
 }
 
 .checkbox input:checked {
