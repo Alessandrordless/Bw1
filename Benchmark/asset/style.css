@@ -12,7 +12,10 @@ body {
   background-image: url(../Images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 3% 8% 0 8%;
+  max-width: 85%;
+  margin: 0 auto;
+  margin-top: 5%;
+
   font-family: "Outfit", sans-serif;
   color: white;
 }
@@ -107,7 +110,7 @@ main span {
 }
 
 .questions-counter {
-  margin-top: 10%;
+  margin-top: 2%;
   word-spacing: 5px;
   letter-spacing: 3px;
 }
@@ -120,12 +123,15 @@ main span {
   background-color: #c2128d;
 }
 
-.btn-next {
-  height: 2rem;
-  margin-top: 2%;
-}
-
-.btn-next button {
-  width: 15%;
-  height: 2rem;
+#btn-next {
+  width: 19%;
+  height: 35px;
+  background-color: inherit;
+  color: white;
+  border: 1px solid grey;
+  font-size: 16px;
+  font-family: "Outfit";
+  font-weight: 600;
+  box-shadow: 1px 2px 15px 7px rgb(123 84 193);
+  margin: 3%;
 }
