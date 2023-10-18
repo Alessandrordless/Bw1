@@ -2,6 +2,7 @@
 
 body {
   background-image: url("../../Welcome/Images/bg.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   color: white;
   font-family: "Outfit", sans-serif;
@@ -71,6 +72,7 @@ h2 {
   font-size: 25px;
   font-weight: bold;
   font-family: sans-serif;
+  height: 85%;
 }
 .pie:before {
   content: "";
@@ -86,7 +88,6 @@ h2 {
   text-align: center;
 }
 #btn-rateus button {
-  padding: 10px 50px;
   font-size: 1.3rem;
   font-weight: bold;
   background-color: transparent;
@@ -94,7 +95,11 @@ h2 {
   box-shadow: 1px 1px 30px 1px rgba(0, 255, 225, 0.445);
   padding: 15px 60px;
   color: white;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
+
 .pie p {
   font-size: 1rem;
   line-height: 1.5;

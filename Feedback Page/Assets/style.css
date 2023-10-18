@@ -83,6 +83,7 @@ main form {
   padding: 15px 45px;
   margin-top: 5%;
   box-shadow: 1px 1px 20px 1px #00ffff;
+  cursor: pointer;
 }
 
 #btn:disabled {
@@ -95,6 +96,7 @@ main form {
   padding-left: 1%;
   color: #0b113b;
   filter: grayscale(1);
+  cursor: pointer;
 }
 
 ::placeholder {
@@ -108,6 +110,10 @@ main form {
   width: 100%;
   text-align: start;
   margin: 0 17% 0;
+}
+
+input {
+  cursor: pointer;
 }
 
 .button-div {
