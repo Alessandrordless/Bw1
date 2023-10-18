@@ -101,12 +101,14 @@ main span {
   border-radius: 50px;
   border-left: 1px solid white;
   box-shadow: -1px -2px 2px 0px #f5f5f5;
+  cursor: pointer;
 }
 
 .answers button {
   background-color: initial;
   border: none;
   margin-top: 5%;
+  cursor: pointer;
 }
 
 .questions-counter {
@@ -134,4 +136,5 @@ main span {
   font-weight: 600;
   box-shadow: 1px 2px 15px 7px rgb(123 84 193);
   margin: 3%;
+  cursor: pointer;
 }

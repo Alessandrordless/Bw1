@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  width: 10%;
+  width: 17%;
 }
 
 header img {
@@ -80,6 +80,7 @@ ul li {
   vertical-align: text-bottom;
   appearance: none;
   border: 1px outset white;
+  cursor: pointer;
 }
 
 .checkbox input:checked {
@@ -99,6 +100,7 @@ ul li {
   padding: 20px 60px;
   float: right;
   box-shadow: 1px 1px 30px 4px #00ffff;
+  cursor: pointer;
 }
 
 #btn-1:disabled {
