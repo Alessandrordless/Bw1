@@ -15,19 +15,21 @@ body {
   background-image: url(../../Welcome/Images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 3% 8% 0 8%;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 5%;
   font-family: "Outfit", sans-serif;
   color: white;
   text-align: center;
 }
 
 header {
-  width: 10%;
+  width: 17%;
 }
 
 header img {
-  width: 150px;
-  margin: 40% 0 0 90%;
+  width: 100%;
+  margin: 20%;
 }
 
 main h1 {
