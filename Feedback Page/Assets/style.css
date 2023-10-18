@@ -91,7 +91,8 @@ main form {
 .star {
   width: 5%;
   padding-left: 1%;
-  filter: brightness(0.5deg);
+  color: #0b113b;
+  filter: grayscale(1);
 }
 
 ::placeholder {
@@ -113,5 +114,5 @@ main form {
 }
 
 .stars-on {
-  filter: hue-rotate(55deg);
+  filter: none;
 }
