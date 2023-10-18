@@ -75,15 +75,17 @@ ul li {
 }
 
 .checkbox input {
-  height: 20px;
-  width: 2%;
-  vertical-align: middle;
+  height: 17px;
+  width: 17px;
+  vertical-align: text-bottom;
   appearance: none;
-  border: 1px solid white;
+  border: 1px outset white;
 }
+
 .checkbox input:checked {
-  appearance: auto;
+  background-color: #c2128d;
 }
+
 .checkbox span {
   padding-left: 1%;
 }
