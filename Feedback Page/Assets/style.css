@@ -15,12 +15,16 @@ body {
   background-image: url(../../Welcome/Images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 100%;
-  margin: 0 auto;
-  margin-top: 5%;
+
   font-family: "Outfit", sans-serif;
   color: white;
   text-align: center;
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+  margin-top: 5%;
 }
 
 header {
@@ -117,4 +121,9 @@ main form {
 
 .stars-on {
   filter: none;
+}
+
+#btn:disabled {
+  box-shadow: none;
+  background-color: grey;
 }

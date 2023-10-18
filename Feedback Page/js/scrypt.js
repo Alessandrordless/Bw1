@@ -1,6 +1,6 @@
 // const star1 = document.getElementByClass("star");
 
-const stars = Array.from(document.getElementsByTagName("img"));
+const stars = Array.from(document.getElementsByClassName("star"));
 console.log(stars);
 const starContainer = document.querySelector(".star");
 
@@ -21,3 +21,12 @@ const filteredElement = document.getElementsByClassName("star");
 filteredElement.addEventListener("click", filteredElement);
 
 filteredElement();
+
+// const input = document.getElementsByTagName("input")[0];
+// const button = document.getElementById("btn");
+
+// button.disabled = true;
+
+// input.addEventListener("change", () => {
+//   button.toggleAttribute("disabled");
+// });
