@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap");
 
 *,
 *::after,
@@ -28,7 +25,7 @@ body {
 }
 
 header {
-  width: 20%;
+  width: 14%;
 }
 
 header img {
@@ -110,9 +107,13 @@ main form {
 }
 
 .div-input {
-  width: 100%;
+  width: 66%;
   text-align: start;
   margin: 0 17% 0;
+}
+
+.div-input input {
+  width: 100%;
 }
 
 input {
@@ -131,4 +132,22 @@ input {
 #btn:disabled {
   box-shadow: none;
   background-color: grey;
+}
+
+.smile {
+  margin-left: 4%;
+}
+
+.smile i {
+  padding: 1% 2.8% 0 0;
+}
+
+.fa-frown {
+  color: rgb(255, 0, 0);
+}
+.fa-meh {
+  color: #fdf400;
+}
+.fa-smile {
+  color: rgb(30, 255, 0);
 }

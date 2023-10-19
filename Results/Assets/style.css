@@ -8,15 +8,15 @@ body {
   font-family: "Outfit", sans-serif;
 }
 header {
-  width: 17%;
+  width: 14%;
 }
 header img {
   width: 100%;
-  margin: 20%;
 }
 #container {
   max-width: 85%;
   margin: 0 auto;
+  margin-top: 5%;
 }
 header + div {
   text-align: center;
@@ -96,7 +96,6 @@ h2 {
   padding: 15px 60px;
   color: white;
   cursor: pointer;
-  display: block;
   margin: 0 auto;
 }
 

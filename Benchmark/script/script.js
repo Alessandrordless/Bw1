@@ -107,7 +107,7 @@ window.onload = function () {
     const counter = document.querySelector(".counter span");
     counter.innerText = --seconds;
     const pie = document.getElementsByClassName("pie")[0];
-    pie.style
+    pie.style;
     if (seconds === 0) {
       nextQuestion(questions, currentquestion, null);
       seconds = 60;
@@ -178,5 +178,3 @@ const populateText = (question) => {
 
   console.log("score:", score);
 };
-
-
