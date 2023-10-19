@@ -112,7 +112,7 @@ main form {
 .div-input {
   width: 100%;
   text-align: start;
-  margin: 0 17% 0;
+  padding-left: 15%;
 }
 
 input {
@@ -131,4 +131,15 @@ input {
 #btn:disabled {
   box-shadow: none;
   background-color: grey;
+}
+
+.div-input button {
+  background-color: #c2128d;
+  border: none;
+  width: 11%;
+  height: 2em;
+  margin-left: 2.5%;
+  color: white;
+  background: linear-gradient(45deg, #6a2775, #c2128d);
+  box-shadow: -1px -3px 12px 1px #6d097f;
 }
