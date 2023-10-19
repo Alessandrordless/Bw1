@@ -103,6 +103,7 @@ let seconds = 60;
 let useranswer = null;
 
 window.onload = function () {
+  let progressBar = 0;
   setInterval(() => {
     const counter = document.querySelector(".counter span");
     counter.innerText = --seconds;
@@ -112,11 +113,14 @@ window.onload = function () {
       nextQuestion(questions, currentquestion, null);
       seconds = 60;
     }
+    progressBar += 100/60
+    pie.style.setProperty("--p", progressBar);
   }, 1000);
   const nextButton = document.getElementById("btn-next");
 
   nextButton.addEventListener("click", handleNext);
   populateText(currentquestion);
+
 };
 
 const handleNext = (event) => {
@@ -127,7 +131,7 @@ const handleNext = (event) => {
 const checkQuestion = (question) => {
   const correctAnswer = question.correct_answer;
   console.log(useranswer, correctAnswer);
-  console.log(useranswer === correctAnswer);
+  console.log("score", useranswer === correctAnswer);
   if (useranswer === correctAnswer) {
     score++;
   }
@@ -180,3 +184,4 @@ const populateText = (question) => {
 };
 
 
+// correctAnswer non cambia mai, controlla
