@@ -133,30 +133,3 @@ input {
   box-shadow: none;
   background-color: grey;
 }
-
-.div-input button {
-  background-color: #c2128d;
-  border: none;
-  width: 11%;
-  height: 2em;
-  margin-left: 2.5%;
-  color: white;
-  background: linear-gradient(45deg, #6a2775, #c2128d);
-  box-shadow: -1px -3px 12px 1px #6d097f;
-.smile {
-  margin-left: 4%;
-}
-
-.smile i {
-  padding: 1% 2.8% 0 0;
-}
-
-.fa-frown {
-  color: rgb(255, 0, 0);
-}
-.fa-meh {
-  color: #fdf400;
-}
-.fa-smile {
-  color: rgb(30, 255, 0);
-}
