@@ -142,6 +142,8 @@ input {
   color: white;
   background: linear-gradient(45deg, #6a2775, #c2128d);
   box-shadow: -1px -3px 12px 1px #6d097f;
+}
+
 .smile {
   margin-left: 4%;
 }
