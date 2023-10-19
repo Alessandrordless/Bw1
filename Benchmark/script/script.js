@@ -187,5 +187,3 @@ const populateText = (question) => {
 
   console.log("score:", score);
 };
-
-
