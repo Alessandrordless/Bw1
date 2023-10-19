@@ -97,30 +97,32 @@ const highlightAnswer = (event) => {
 answers.forEach((answer) => answer.children[0].addEventListener("click", highlightAnswer));
 
 window.score = 0;
-let currentquestion = questions[0];
 let questionNumber = 1;
+let currentquestion = questions[questionNumber - 1];
 let seconds = 60;
 let useranswer = null;
+const pie = document.getElementsByClassName("pie")[0];
+let progressBar = 0;
 
 window.onload = function () {
-  let progressBar = 0;
   setInterval(() => {
     const counter = document.querySelector(".counter span");
     counter.innerText = --seconds;
-    const pie = document.getElementsByClassName("pie")[0];
-    pie.style
+
     if (seconds === 0) {
       nextQuestion(questions, currentquestion, null);
       seconds = 60;
+      progressBar = 0;
+      pie.style.setProperty("--p", progressBar);
+      return;
     }
-    progressBar += 100/60
+    progressBar += 100 / 60;
     pie.style.setProperty("--p", progressBar);
   }, 1000);
   const nextButton = document.getElementById("btn-next");
 
   nextButton.addEventListener("click", handleNext);
   populateText(currentquestion);
-
 };
 
 const handleNext = (event) => {
@@ -129,6 +131,7 @@ const handleNext = (event) => {
 };
 
 const checkQuestion = (question) => {
+  console.log(question);
   const correctAnswer = question.correct_answer;
   console.log(useranswer, correctAnswer);
   console.log("score", useranswer === correctAnswer);
@@ -142,13 +145,15 @@ const nextQuestion = (questions, currentquestion, event) => {
   if (selectedAnswer) {
     selectedAnswer.classList.remove("selected-answer");
   }
+  console.log(currentquestion);
 
-  if (event !== null) {
-    checkQuestion(currentquestion);
-  }
+  checkQuestion(questions[questionNumber - 1]);
   questionNumber++;
   currentquestion = questions[questionNumber - 1];
   populateText(currentquestion);
+  seconds = 60;
+  progressBar = 0;
+  pie.style.setProperty("--p", progressBar);
 };
 
 const populateText = (question) => {
@@ -184,4 +189,3 @@ const populateText = (question) => {
 };
 
 
-// correctAnswer non cambia mai, controlla
