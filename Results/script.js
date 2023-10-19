@@ -26,6 +26,6 @@ if (rightAnswers < 6) {
   const failed2 = document.querySelector(".pie p:nth-of-type(2)"); 
   failed2.innerText = "You failed the exam.";
   const failed3 = document.querySelector(".pie p:nth-of-type(3)"); 
-  failed3.innerText = "You'll do better nex time. Nice try!";
+  failed3.innerText = "You'll do better next time. Nice try!";
 }
 
