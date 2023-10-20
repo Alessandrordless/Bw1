@@ -14,6 +14,8 @@ body {
   background-size: cover;
   font-family: "Outfit", sans-serif;
   color: white;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .container {
@@ -23,17 +25,18 @@ body {
 }
 
 .logo {
-  width: 14%;
+  width: 155px;
+  height: 3px;
 }
 
 .logo img {
-  width: 100%;
+  width: 180px;
 }
 
 .timer {
   position: relative;
-  width: 20%;
-  margin-left: 80%;
+  width: 150px;
+  margin-left: auto;
 }
 
 .pie {
@@ -42,21 +45,18 @@ body {
   aspect-ratio: 1;
   place-content: center;
   text-align: center;
-  margin-top: -20%;
-  margin-left: 6%;
 }
 
 .pie p {
-  font-size: 20px;
+  font-size: 13px;
 }
 
 .pie span {
-  font-size: 3em;
+  font-size: 4vh;
 }
 
 .counter {
-  padding-top: 27%;
-  padding-left: 5%;
+  padding-top: 46px;
 }
 
 .pie:before {
@@ -67,15 +67,13 @@ body {
   background: conic-gradient(var(--c) calc(var(--p) * 1%), #02fefe 0);
   -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
   mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
-  margin-bottom: 40px;
-  margin-left: 40px;
 }
 
 main h1 {
-  font-size: 60px;
-  padding-bottom: 3%;
+  font-size: 45px;
   font-weight: 300;
   text-align: center;
+  margin-top: 4%;
 }
 
 main span {

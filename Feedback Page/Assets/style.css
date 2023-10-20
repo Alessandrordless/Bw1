@@ -12,16 +12,18 @@ body {
   background-image: url(../../Welcome/Images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
   font-family: "Outfit", sans-serif;
   color: white;
   text-align: center;
+  line-height: 1;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .container {
   max-width: 85%;
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 header {
@@ -36,7 +38,7 @@ main h1 {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
   font-weight: 600;
-  margin-top: 8%;
+  margin-top: 3%;
   padding-bottom: 2%;
 }
 
