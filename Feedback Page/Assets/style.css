@@ -111,9 +111,14 @@ main form {
 
 .div-input input {
   width: 50%;
+  outline: none;
 }
 
 input {
+  cursor: pointer;
+}
+
+.div-input button {
   cursor: pointer;
 }
 
